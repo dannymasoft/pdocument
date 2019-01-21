@@ -1,6 +1,5 @@
-
 <?php 
-$controladores=$_SESSION['controladores'];
+$controladores=(isset($_SESSION['controladores']))?$_SESSION['controladores']:array();
  function getcontrolador($controlador,$controladores){
  	$display="display:none";
  	
@@ -50,8 +49,7 @@ $controladores=$_SESSION['controladores'];
 
             
           </ul>
-        </li>
-        
+        </li>       
         
          <li class="treeview"  style="<?php echo getcontrolador("MenuInventario",$controladores) ?>"  >
           <a href="#">
@@ -71,6 +69,19 @@ $controladores=$_SESSION['controladores'];
 
           </ul>
         </li>
+        <!-- li para pdocument -->
+        <li class="treeview"   >
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Procesos</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li ><a href="index.php?controller=Procesos&action=index"><i class="fa fa-circle-o"></i> Datos</a></li>
+            
+          </ul>
+        </li><!-- termina li de pdocument -->
         
        
        
