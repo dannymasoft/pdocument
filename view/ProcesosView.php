@@ -114,7 +114,7 @@
             
            <div class="nav-tabs-custom">
             <ul class="nav nav-tabs" id="mytab">
-              <li class="active"><a href="#nivel2" data-toggle="tab">Nivel 2</a></li>
+              <li ><a  href="#nivel2" data-toggle="tab">Nivel 2</a></li>
               <li><a href="#nivel1" data-toggle="tab">Nivel 1</a></li>
             </ul>
             
@@ -142,7 +142,7 @@
               
               <div class="tab-pane" id="nivel1">
                 
-                   
+                   hola
                 
               </div>
              
@@ -281,8 +281,9 @@ $(document).ready(function(){
 			}).done(function(respuesta){
 				
 				if(parseInt(respuesta.id_clientes)>0){
+					
+					$('.nav-tabs a[href="#nivel2"]').tab('show');
 					$('#id_clientes').val(respuesta.id_clientes);
-					$('[href="#nivel2"]').tab('show');
 				}
 			
 			}).fail(function(respuesta) {
